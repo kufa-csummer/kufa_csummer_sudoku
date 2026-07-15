@@ -153,7 +153,6 @@ void logic_clearGrid(Cell grid[BOARD_SIZE][BOARD_SIZE]) {
 
 
 
-// just need to finish this :P
 
 void game_generatePuzzle(Game *game, Difficulty difficulty) {
     int targetHints=0;
