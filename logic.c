@@ -4,6 +4,8 @@
 #include "sudoku.h"
 
 static int solutionGrid[BOARD_SIZE][BOARD_SIZE];
+#define BOX_SIZE 3 
+
 
 bool logic_isValidMove(const Cell grid[BOARD_SIZE][BOARD_SIZE], int row, int col, int num) {
     if (num == 0) {
@@ -22,9 +24,9 @@ bool logic_isValidMove(const Cell grid[BOARD_SIZE][BOARD_SIZE], int row, int col
     }
 
     // starting row number of the current box
-    int startRow = (row / 3) * 3;
+    int startRow = (row / BOX_SIZE) * 3;
     // starting column number of the current box
-    int startCol = (col / 3) * 3;
+    int startCol = (col / BOX_SIZE) * 3;
     
     for (int boxRow = 0; boxRow < 3; boxRow++) {
         for (int boxCol = 0; boxCol < 3; boxCol++) {
