@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "raylib.h"
 #include "sudoku.h"
-#include <time.h>
 
 static int solutionGrid[BOARD_SIZE][BOARD_SIZE];
 
@@ -149,8 +148,6 @@ void logic_clearGrid(Cell grid[BOARD_SIZE][BOARD_SIZE]) {
     }
 
 }
-
-
 
 
 
