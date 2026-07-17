@@ -93,14 +93,16 @@ bool logic_solveSudoku(Cell grid[BOARD_SIZE][BOARD_SIZE]) {
 
 
 
-void logic_placeNumber(Game *game, int row, int col, int num){
+void logic_placeNumber(Game *game, int row, int col, int num) {
     if (game->grid[row][col].isGiven) {
         return;
     }
 
+    if (!logic_isValidMove(game->grid, row, col, num)) {
+        return; 
+    }
+    
     game->grid[row][col].value = num;
-
-    // 3. Check against the internal answer key
     if (num != solutionGrid[row][col]) {
         game->grid[row][col].isError = true;
         game->mistakes++;
