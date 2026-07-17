@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "raylib.h"
-#include "sudoku.h""
+#include "sudoku.h"
 
 void render_drawGridLines(void);
 void render_drawCell(const Game* game, int row, int col);
