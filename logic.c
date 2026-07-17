@@ -99,6 +99,7 @@ void logic_placeNumber(Game *game, int row, int col, int num) {
     }
 
     if (!logic_isValidMove(game->grid, row, col, num)) {
+        game->mistakes++;
         return; 
     }
     
